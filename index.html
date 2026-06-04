@@ -1,0 +1,1511 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satish Upadhyay | AI-Driven Product &amp; Services Leader</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              zinc: {
+                850: '#18181b', // custom mid-dark gray
+                950: '#050505', // deep black-gray
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Custom Global Styles -->
+    <style type="text/css">
+      body {
+        background-color: #050505;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      .dark body {
+        background-color: #050505;
+        color: #f4f4f5;
+      }
+      html:not(.dark) body {
+        background-color: #fafafa;
+        color: #18181b;
+      }
+      
+      /* Mesh grid background pattern */
+      .mesh-bg {
+        background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.12) 1px, transparent 0);
+        background-size: 32px 32px;
+      }
+      html:not(.dark) .mesh-bg {
+        background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.08) 1px, transparent 0);
+      }
+
+      /* Custom print targets */
+      @media print {
+        body {
+          background: white !important;
+          color: black !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        #printable-resume-area {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: auto;
+          display: block !important;
+          z-index: 99999;
+          background: white !important;
+          color: black !important;
+          padding: 0 !important;
+        }
+      }
+
+      /* Smooth transitions */
+      .collapsible-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-out, opacity 0.3s ease;
+        opacity: 0;
+      }
+      .collapsible-content.expanded {
+        max-height: 1000px;
+        opacity: 1;
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.2);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(59, 130, 246, 0.25);
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(59, 130, 246, 0.5);
+      }
+    </style>
+  </head>
+  <body class="font-sans antialiased selection:bg-blue-500/30">
+
+    <!-- Splash Screen Sequence -->
+    <div id="splash-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-zinc-950 text-white transition-opacity duration-500">
+      <div class="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-900/25 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-900/25 rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative z-10 flex flex-col items-center max-w-sm px-6 text-center">
+        <!-- Logo Badge -->
+        <div class="relative flex items-center justify-center w-24 h-24 mb-8 rounded-2xl border border-blue-500/30 bg-zinc-90 w-auto bg-zinc-900/80 backdrop-blur-md shadow-2xl overflow-hidden animate-pulse">
+          <span class="font-display text-4xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">SU</span>
+        </div>
+        <h1 class="font-display text-2xl font-bold tracking-wider text-zinc-100 mb-1">SATISH UPADHYAY</h1>
+        <p class="font-mono text-xs text-blue-400 tracking-widest uppercase mb-10">AI Systems &amp; Program Leader</p>
+        
+        <!-- Progress Bar -->
+        <div class="w-48 h-1 rounded-full bg-zinc-800 overflow-hidden relative mb-2">
+          <div id="splash-progress" class="h-full bg-gradient-to-r from-blue-500 to-indigo-550 w-0 transition-all duration-100"></div>
+        </div>
+        <span class="font-mono text-[10px] text-zinc-500 tracking-wider">SYSTEM ALPHA // CORES ONLINE</span>
+      </div>
+    </div>
+
+    <!-- Main Content Wrapper (Hidden until splash completes) -->
+    <div id="app-container" class="opacity-0 transition-opacity duration-700 min-h-screen flex flex-col justify-between relative">
+      <!-- Grid Dot Mesh Layer -->
+      <div class="absolute inset-0 z-0 pointer-events-none mesh-bg"></div>
+
+      <!-- Header Navigation Bar -->
+      <header class="fixed top-0 left-0 right-0 z-40 bg-[#050505]/80 dark:bg-zinc-950/80 html:not(.dark):bg-white/80 backdrop-blur-md border-b border-zinc-800/50 html:not(.dark):border-zinc-200/50">
+        <!-- Scroll Progress Indicator -->
+        <div class="absolute top-0 left-0 right-0 h-[2px] bg-zinc-800 html:not(.dark):bg-zinc-200">
+          <div id="scroll-progress" class="h-full bg-gradient-to-r from-blue-500 via-indigo-500 to-cyan-400 w-0"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <!-- Brand Logo -->
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="scrollToSection('hero')">
+              <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-indigo-600 text-white font-display font-black text-sm shadow-md">
+                SU
+              </div>
+              <div>
+                <span class="font-display font-bold text-sm text-zinc-100 dark:text-zinc-100 html:not(.dark):text-zinc-900 tracking-wide block">SATISH UPADHYAY</span>
+                <span class="block text-[9px] font-mono text-blue-400 tracking-wider">PROGRAM &amp; SERVICES LEADER</span>
+              </div>
+            </div>
+
+            <!-- Desktop Nav Items -->
+            <nav class="hidden md:flex items-center space-x-1">
+              <button onclick="scrollToSection('hero')" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase text-blue-400 bg-blue-500/10 font-medium">Home</button>
+              <button onclick="scrollToSection('experience')" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase text-zinc-400 hover:text-zinc-100 html:not(.dark):text-zinc-650 html:not(.dark):hover:text-zinc-950 hover:bg-zinc-800/30">Story</button>
+              <button onclick="scrollToSection('achievements')" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase text-zinc-400 hover:text-zinc-100 html:not(.dark):text-zinc-650 html:not(.dark):hover:text-zinc-950 hover:bg-zinc-800/30">Impact</button>
+              <button onclick="scrollToSection('projects')" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase text-zinc-400 hover:text-zinc-100 html:not(.dark):text-zinc-650 html:not(.dark):hover:text-zinc-950 hover:bg-zinc-800/30">Initiatives</button>
+              <button onclick="scrollToSection('skills')" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase text-zinc-400 hover:text-zinc-100 html:not(.dark):text-zinc-650 html:not(.dark):hover:text-zinc-950 hover:bg-zinc-800/30">Skills</button>
+              <button onclick="scrollToSection('contact')" class="nav-btn px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase text-zinc-400 hover:text-zinc-100 html:not(.dark):text-zinc-650 html:not(.dark):hover:text-zinc-950 hover:bg-zinc-800/30">Reach Out</button>
+            </nav>
+
+            <!-- Actions and Link Shortcuts -->
+            <div class="flex items-center space-x-3">
+              <a href="https://www.linkedin.com/in/satishkrupadhyay" target="_blank" rel="noreferrer" class="text-zinc-400 hover:text-zinc-200 html:not(.dark):text-zinc-550 html:not(.dark):hover:text-zinc-850 p-1.5 rounded-lg hover:bg-zinc-850/40" title="LinkedIn Profile">
+                <i data-lucide="linkedin" class="w-4.5 h-4.5"></i>
+              </a>
+              <a href="https://github.com/satishkrupadhyay/" target="_blank" rel="noreferrer" class="text-zinc-400 hover:text-zinc-200 html:not(.dark):text-zinc-550 html:not(.dark):hover:text-zinc-850 p-1.5 rounded-lg hover:bg-zinc-850/40" title="GitHub Profile">
+                <i data-lucide="github" class="w-4.5 h-4.5"></i>
+              </a>
+
+              <button onclick="toggleResumeModal()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium border border-blue-500/30 text-blue-400 hover:bg-blue-500/10 transition-all shadow-sm">
+                <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                <span class="hidden lg:inline">Executive PDF</span>
+              </button>
+
+              <!-- Theme Switch -->
+              <button onclick="toggleDarkMode()" class="p-2 rounded-lg bg-zinc-900 html:not(.dark):bg-zinc-100 border border-zinc-800/60 html:not(.dark):border-zinc-200/60 text-zinc-400 html:not(.dark):text-zinc-700 hover:text-zinc-100 cursor-pointer" title="Switch Theme">
+                <i data-lucide="sun" class="w-4 h-4 text-amber-400 dark-only"></i>
+                <i data-lucide="moon" class="w-4 h-4 text-indigo-650 light-only hidden"></i>
+              </button>
+
+              <!-- Mobile burger -->
+              <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-zinc-400 hover:text-zinc-100">
+                <i data-lucide="menu" id="menu-icon-burger" class="w-5 h-5"></i>
+                <i data-lucide="x" id="menu-icon-close" class="w-5 h-5 hidden"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile Drawer menu -->
+        <div id="mobile-drawer" class="hidden md:hidden border-t border-zinc-800/60 bg-[#050505] dark:bg-zinc-950 html:not(.dark):bg-white px-4 py-4 space-y-2">
+          <button onclick="mobileNavigate('hero')" class="w-full text-left px-4 py-3 rounded-lg text-xs font-mono uppercase text-blue-400 bg-blue-500/10">Home</button>
+          <button onclick="mobileNavigate('experience')" class="w-full text-left px-4 py-3 rounded-lg text-xs font-mono uppercase text-zinc-400">Story</button>
+          <button onclick="mobileNavigate('achievements')" class="w-full text-left px-4 py-3 rounded-lg text-xs font-mono uppercase text-zinc-400">Impact</button>
+          <button onclick="mobileNavigate('projects')" class="w-full text-left px-4 py-3 rounded-lg text-xs font-mono uppercase text-zinc-400">Initiatives</button>
+          <button onclick="mobileNavigate('skills')" class="w-full text-left px-4 py-3 rounded-lg text-xs font-mono uppercase text-zinc-400">Core Skills</button>
+          <button onclick="mobileNavigate('contact')" class="w-full text-left px-4 py-3 rounded-lg text-xs font-mono uppercase text-zinc-400">Reach Out</button>
+          
+          <div class="pt-2 border-t border-zinc-800/40 flex justify-between items-center px-4">
+            <span class="text-[10px] font-mono text-zinc-500">RESUME UTILITIES</span>
+            <button onclick="toggleResumeModal(); toggleMobileMenu();" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-mono text-blue-400 border border-blue-500/30">
+              <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+              <span>Interactive PDF</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Scrollable Main Dashboard Sections -->
+      <main class="grow relative z-10">
+
+        <!-- 🌌 Hero Spotlight Section -->
+        <section id="hero" class="relative min-h-screen flex flex-col justify-center pt-24 pb-16 overflow-hidden">
+          <div class="absolute inset-0 z-0 pointer-events-none opacity-20 dark:opacity-30">
+            <div class="absolute top-1/3 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent"></div>
+            <div class="absolute top-2/3 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-indigo-500 to-transparent"></div>
+            
+            <div class="absolute top-1/4 right-[10%] w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-1/4 left-[10%] w-[500px] h-[500px] bg-indigo-600/5 rounded-full blur-[120px]"></div>
+          </div>
+
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex flex-col justify-between h-auto grow">
+            <div class="my-auto max-w-4xl pt-8">
+              <!-- Banner status -->
+              <div class="inline-flex items-center space-x-2 px-3 py-1 mb-6 rounded-full border border-blue-500/25 bg-blue-500/5 backdrop-blur-md">
+                <span class="flex h-2 w-2 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                <span class="font-mono text-[10px] tracking-widest text-blue-400 uppercase font-semibold">
+                  Currently transforming businesses with BoldTek
+                </span>
+              </div>
+
+              <!-- Displays -->
+              <h1 class="font-display text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-zinc-100 dark:text-zinc-100 html:not(.dark):text-zinc-900 mb-6 leading-[1.1] sm:leading-none">
+                Satish Upadhyay
+              </h1>
+
+              <h2 class="font-display text-xl sm:text-2xl md:text-3xl font-medium text-blue-400 html:not(.dark):text-blue-600 tracking-wide mb-6 max-w-3xl">
+                AI-Driven Product, Services &amp; Business Consultant
+              </h2>
+
+              <p class="font-sans text-sm sm:text-base md:text-lg text-zinc-400 html:not(.dark):text-zinc-700 leading-relaxed max-w-2xl mb-10">
+                With over <strong class="text-zinc-200 html:not(.dark):text-zinc-950">11+ years of proven success</strong> in the software industry. An accomplished Program Manager, Business Consultant, and certified leader (CSM®, CSPO®) specializing in agile delivery, business transformation, AI/ML initiatives, and bridging engineering with market expansion globally.
+              </p>
+
+              <!-- Button cluster -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16">
+                <button onclick="scrollToSection('contact')" class="group relative flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl bg-blue-600 text-white font-mono text-xs tracking-wider uppercase font-semibold shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:bg-blue-500 cursor-pointer overflow-hidden border border-blue-500/30">
+                  <span>Contact &amp; Reach Out</span>
+                  <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </button>
+
+                <button onclick="scrollToSection('experience')" class="flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-950/30 html:not(.dark):bg-white/30 backdrop-blur-md hover:bg-zinc-800/40 text-zinc-350 html:not(.dark):text-zinc-700 font-mono text-xs tracking-wider uppercase cursor-pointer">
+                  <span>Explore My Story</span>
+                  <i data-lucide="arrow-down" class="w-3.5 h-3.5 text-blue-400"></i>
+                </button>
+
+                <button onclick="toggleResumeModal()" class="flex items-center justify-center space-x-2 px-6 py-3.5 rounded-xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-950/30 html:not(.dark):bg-white/30 backdrop-blur-md hover:bg-zinc-800/40 text-zinc-350 html:not(.dark):text-zinc-700 font-mono text-xs tracking-wider uppercase cursor-pointer">
+                  <i data-lucide="file-text" class="w-4 h-4 text-blue-400"></i>
+                  <span>View Executive CV</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Three Impact Metrics strip -->
+            <div class="border-t border-zinc-805/60 html:not(.dark):border-zinc-200/60 pt-8 mt-4">
+              <div class="text-[10px] font-mono text-blue-400 tracking-widest uppercase mb-4 font-semibold">
+                TOP 3 IMPACT SUMMARY: RECORD OF RESULTS
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Stat 1 -->
+                <div class="flex flex-col space-y-2 p-5 rounded-xl border border-blue-500/10 html:not(.dark):border-zinc-200 bg-blue-500/5 html:not(.dark):bg-white backdrop-blur-sm hover:border-blue-500/20 transition-all">
+                  <div class="flex items-center space-x-3">
+                    <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+                      <i data-lucide="award" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-display text-2xl font-bold text-zinc-150 html:not(.dark):text-zinc-900 tracking-tight">11+ Years</span>
+                  </div>
+                  <p class="font-sans text-xs text-zinc-400 html:not(.dark):text-zinc-650 leading-relaxed">
+                    Proven software leadership across AI/ML initiatives, agile delivery pipelines, and company expansion into global markets.
+                  </p>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="flex flex-col space-y-2 p-5 rounded-xl border border-indigo-500/10 html:not(.dark):border-zinc-200 bg-indigo-500/5 html:not(.dark):bg-white backdrop-blur-sm hover:border-indigo-500/20 transition-all">
+                  <div class="flex items-center space-x-3">
+                    <div class="p-2 rounded-lg bg-indigo-500/10 text-indigo-400">
+                      <i data-lucide="users" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-display text-2xl font-bold text-zinc-150 html:not(.dark):text-zinc-900 tracking-tight">30+ Engineers</span>
+                  </div>
+                  <p class="font-sans text-xs text-zinc-400 html:not(.dark):text-zinc-650 leading-relaxed">
+                    Lead major product development pools, orchestrating technical execution, resource allocation, and continuous workflow feedback loops.
+                  </p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="flex flex-col space-y-2 p-5 rounded-xl border border-indigo-500/10 html:not(.dark):border-zinc-200 bg-indigo-500/5 html:not(.dark):bg-white backdrop-blur-sm hover:border-indigo-500/20 transition-all">
+                  <div class="flex items-center space-x-3">
+                    <div class="p-2 rounded-lg bg-blue-500/10 text-blue-400">
+                      <i data-lucide="layers" class="w-4 h-4"></i>
+                    </div>
+                    <span class="font-display text-2xl font-bold text-zinc-150 html:not(.dark):text-zinc-900 tracking-tight">100+ Stakeholders</span>
+                  </div>
+                  <p class="font-sans text-xs text-zinc-400 html:not(.dark):text-zinc-650 leading-relaxed">
+                    Seamless coordination with extensive networks of ODMs, vendors, project managers, and remote engineering cadres.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 💼 Career Chronicle Section -->
+        <section id="experience" class="py-24 border-b border-zinc-805/40 relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header Filters Row -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+              <div>
+                <div class="font-mono text-[10px] tracking-widest text-blue-400 uppercase font-semibold mb-2">
+                  Career Evolution Timeline
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-100 html:not(.dark):text-zinc-900">
+                  The Professional Story
+                </h2>
+              </div>
+
+              <!-- Interactive filter pill selectors -->
+              <div class="mt-4 md:mt-0 flex items-center space-x-2 bg-zinc-900/60 html:not(.dark):bg-zinc-100 p-1 rounded-xl border border-zinc-800 html:not(.dark):border-zinc-200">
+                <button id="exp-filter-all" onclick="setExperienceFilter('all')" class="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase transition-colors bg-blue-600 text-white font-medium">
+                  <i data-lucide="filter" class="w-3.5 h-3.5"></i>
+                  <span>Full Chronicle</span>
+                </button>
+                <button id="exp-filter-metrics" onclick="setExperienceFilter('metrics')" class="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase transition-colors text-zinc-455 html:not(.dark):text-zinc-650">
+                  <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-400"></i>
+                  <span>Impact Only</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Timeline Split Columns -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <!-- Main timeline roll (8 cols) -->
+              <div class="lg:col-span-8 space-y-4" id="experience-timeline-container">
+                <!-- Populated dynamically via app.js -->
+                <div class="flex items-center justify-center py-10">
+                  <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+                </div>
+              </div>
+
+              <!-- Sidebar highlights column (4 cols) -->
+              <div class="lg:col-span-4 space-y-6">
+                <div class="p-6 rounded-xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-900/40 html:not(.dark):bg-white shadow-sm backdrop-blur-md">
+                  <div class="flex items-center space-x-2.5 mb-4 pb-3 border-b border-zinc-800 html:not(.dark):border-zinc-100">
+                    <div class="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400">
+                      <i data-lucide="award" class="w-4 h-4"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-sm text-zinc-100 html:not(.dark):text-zinc-900 uppercase tracking-wide">
+                      Strategic Scope Highlights
+                    </h3>
+                  </div>
+                  <p class="font-sans text-xs text-zinc-400 html:not(.dark):text-zinc-650 leading-relaxed mb-4">
+                    Automated aggregation of Satish&apos;s most measurable outcomes from 11+ years of tech-industry performance:
+                  </p>
+                  
+                  <div class="space-y-4">
+                    <!-- Stat A -->
+                    <div class="bg-zinc-950/40 html:not(.dark):bg-zinc-50 p-3 rounded-lg border border-blue-500/10 hover:border-blue-500/20 transition-all">
+                      <div class="text-[10px] font-mono text-blue-500 font-medium uppercase mb-1">TEAM CAPACITY</div>
+                      <div class="font-display text-base font-bold text-zinc-200 html:not(.dark):text-zinc-900 mb-1">Managed Teams of 30+</div>
+                      <p class="text-[11px] text-zinc-400 html:not(.dark):text-zinc-650 leading-normal">
+                        Fostered continuous iteration, agility architectures, and prompt excellence for 30+ software engineering contributors simultaneously.
+                      </p>
+                    </div>
+
+                    <!-- Stat B -->
+                    <div class="bg-zinc-950/40 html:not(.dark):bg-zinc-50 p-3 rounded-lg border border-blue-500/10 hover:border-blue-500/20 transition-all">
+                      <div class="text-[10px] font-mono text-cyan-500 font-medium uppercase mb-1">STAKEHOLDER SYNC</div>
+                      <div class="font-display text-base font-bold text-zinc-200 html:not(.dark):text-zinc-900 mb-1">100+ Global Partners</div>
+                      <p class="text-[11px] text-zinc-400 html:not(.dark):text-zinc-650 leading-normal">
+                        Liaised extensively with remote ODMs, offshore teams, and vendor units, maintaining 100% SLA standards.
+                      </p>
+                    </div>
+
+                    <!-- Stat C -->
+                    <div class="bg-zinc-950/40 html:not(.dark):bg-zinc-50 p-3 rounded-lg border border-indigo-500/10 hover:border-indigo-500/20 transition-all">
+                      <div class="text-[10px] font-mono text-indigo-500 font-medium uppercase mb-1">STRATEGIC GROWTH</div>
+                      <div class="font-display text-base font-bold text-zinc-200 html:not(.dark):text-zinc-900 mb-1">5+ Complete Deliveries</div>
+                      <p class="text-[11px] text-zinc-400 html:not(.dark):text-zinc-650 leading-normal">
+                        Guided multi-million client accounts from clean ideation arrays up to full production release.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="mt-6 pt-4 border-t border-zinc-800 html:not(.dark):border-zinc-100 flex items-center justify-between">
+                    <span class="text-[10px] font-mono text-zinc-500 font-bold">FOOTPRINT:</span>
+                    <span class="font-mono text-[9px] text-zinc-400 html:not(.dark):text-zinc-700 font-semibold uppercase bg-zinc-800 html:not(.dark):bg-zinc-200 px-2 py-0.5 rounded">
+                      India • USA • Taiwan
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 🏆 Spotlight Achievements Index Section -->
+        <section id="achievements" class="py-24 border-b border-zinc-850 dark:border-zinc-805/40 relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header description -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <div class="font-mono text-[10px] tracking-widest text-blue-400 uppercase font-semibold mb-2">
+                Performance Index &amp; Accomplishments
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-100 html:not(.dark):text-zinc-900 mb-4">
+                Spotlight Milestones
+              </h2>
+              <p class="font-sans text-xs sm:text-sm text-zinc-400 html:not(.dark):text-zinc-650 leading-relaxed">
+                Explorable card grid highlighting structured measurable achievements from Satish&apos;s history. Select a focus filter below to isolate specific domains.
+              </p>
+            </div>
+
+            <!-- Segment categories navigation tab pills -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12" id="achievements-filter-tabs">
+              <!-- Rendered Dynamically -->
+            </div>
+
+            <!-- Spotlight Card grids output -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="achievements-grid-root">
+              <!-- Dynamic loading -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 🚀 Technical Flagships Initiatives Section -->
+        <section id="projects" class="py-24 border-b border-zinc-805/40 relative">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Section Title -->
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+              <div>
+                <div class="font-mono text-[10px] tracking-widest text-blue-400 uppercase font-semibold mb-2">
+                  Enterprise Initiatives
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-100 html:not(.dark):text-zinc-900">
+                  Technical Flagships
+                </h2>
+              </div>
+              <p class="mt-4 md:mt-0 font-sans text-xs sm:text-sm text-zinc-400 html:not(.dark):text-zinc-650 max-w-sm">
+                Core complex solutions designed and architectural pillars deployed under active corporate management roles.
+              </p>
+            </div>
+
+            <!-- Project Cards Grid Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="projects-grid-root">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+        </section>
+
+        <!-- 🛠️ Core Skills Matrix & Credentials Section -->
+        <section id="skills" class="py-24 relative border-b border-zinc-805/40">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- Header titles -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <div class="font-mono text-[10px] tracking-widest text-blue-400 uppercase font-semibold mb-2">
+                Subject Matter expertise
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-100 html:not(.dark):text-zinc-900 mb-4">
+                Intellectual Assets
+              </h2>
+              <p class="font-sans text-xs sm:text-sm text-zinc-400 html:not(.dark):text-zinc-650">
+                A comprehensive matrix of Satish&apos;s methodologies, engineering frameworks, official professional accreditations, and linguistic abilities.
+              </p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <!-- Left: Tech Skills & Fluency matrix (8 cols) -->
+              <div class="lg:col-span-8 space-y-8">
+                <!-- Group skills -->
+                <div class="p-6 md:p-8 rounded-2xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-950/20 html:not(.dark):bg-white shadow-sm backdrop-blur-md">
+                  <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-zinc-801 html:not(.dark):border-zinc-100">
+                    <div class="p-2 rounded-xl bg-blue-500/10 text-blue-400">
+                      <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-zinc-100 html:not(.dark):text-zinc-900 uppercase tracking-wider">
+                      Frameworks &amp; Core Capacities
+                    </h3>
+                  </div>
+                  <div class="space-y-8" id="skills-matrix-root">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+
+                <!-- Languages progress meters -->
+                <div class="p-6 rounded-2xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-950/20 html:not(.dark):bg-white shadow-sm backdrop-blur-md sm:p-8">
+                  <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-zinc-801 html:not(.dark):border-zinc-100">
+                    <div class="p-2 rounded-xl bg-indigo-500/10 text-indigo-400">
+                      <i data-lucide="globe" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-zinc-100 html:not(.dark):text-zinc-900 uppercase tracking-wider">
+                      Linguistic Fluency
+                    </h3>
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="languages-root">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Accreditations (4 cols) -->
+              <div class="lg:col-span-4 space-y-6">
+                <div class="p-6 rounded-2xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-950/20 html:not(.dark):bg-white shadow-sm backdrop-blur-md">
+                  <div class="flex items-center space-x-3 mb-6 pb-4 border-b border-zinc-811 html:not(.dark):border-zinc-100">
+                    <div class="p-2 rounded-xl bg-blue-500/10 text-blue-400">
+                      <i data-lucide="award" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="font-display font-bold text-base text-zinc-100 html:not(.dark):text-zinc-900 uppercase tracking-wider">
+                      Accreditations
+                    </h3>
+                  </div>
+                  <div class="space-y-4" id="certifications-root">
+                    <!-- Populated dynamically -->
+                  </div>
+                  <div class="mt-6 pt-4 border-t border-zinc-800 html:not(.dark):border-zinc-100 flex items-center justify-between text-[11px] font-mono">
+                    <span class="text-[10px] text-zinc-444 uppercase">AUTHORITY:</span>
+                    <span class="font-bold text-blue-400">MASTER GRADE</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 🎓 Education foundations Section -->
+        <section class="py-24 relative border-b border-zinc-805/40">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+              <div>
+                <div class="font-mono text-[10px] tracking-widest text-blue-400 uppercase font-semibold mb-2">
+                  Academic credentials
+                </div>
+                <h2 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-100 html:not(.dark):text-zinc-900">
+                  Education &amp; Foundations
+                </h2>
+              </div>
+              <p class="mt-4 md:mt-0 font-sans text-xs sm:text-sm text-zinc-400 html:not(.dark):text-zinc-650 max-w-sm">
+                Operational business grounding combined with advanced engineering degrees at primary leading institutions.
+              </p>
+            </div>
+
+            <!-- Timeline grids -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="education-grid-root">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 📞 Contact High-Converting Footer block -->
+      <footer id="contact" class="bg-zinc-950 html:not(.dark):bg-zinc-100 border-t border-zinc-900 html:not(.dark):border-zinc-200 z-10 py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12 pb-12 border-b border-zinc-800 html:not(.dark):border-zinc-200">
+            <!-- Left Info column -->
+            <div>
+              <h3 class="font-display text-2xl font-extrabold tracking-tight text-zinc-100 html:not(.dark):text-zinc-900 mb-3">
+                Let&apos;s consult and transform business
+              </h3>
+              <p class="font-sans text-xs text-zinc-450 html:not(.dark):text-zinc-600 leading-relaxed max-w-sm mb-6" id="footer-basics-summary">
+                Explore elite business transformation, executive consulting, AI/ML strategic roadmaps, or offshore enterprise scaling initiatives.
+              </p>
+              
+              <!-- Quick socials buttons -->
+              <div class="flex items-center space-x-3">
+                <a href="https://www.linkedin.com/in/satishkrupadhyay" target="_blank" rel="noreferrer" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-xs font-mono bg-zinc-900 html:not(.dark):bg-white border border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-300 html:not(.dark):text-zinc-700 hover:text-blue-400 transition-colors">
+                  <i data-lucide="linkedin" class="w-4.5 h-4.5 text-blue-500"></i>
+                  <span>Professional LinkedIn</span>
+                </a>
+                <a href="https://github.com/satishkrupadhyay" target="_blank" rel="noreferrer" class="flex items-center space-x-2 px-3 py-1.5 rounded-lg text-xs font-mono bg-zinc-900 html:not(.dark):bg-white border border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-300 html:not(.dark):text-zinc-700 hover:text-blue-400 transition-colors">
+                  <i data-lucide="github" class="w-4.5 h-4.5"></i>
+                  <span>Source Codes</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Fast Channels column -->
+            <div>
+              <div class="p-5 rounded-2xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-900/30 html:not(.dark):bg-white/50 backdrop-blur-md">
+                <span class="font-mono text-[9px] text-zinc-500 block uppercase font-bold tracking-widest mb-3">
+                  FAST INTERFACE CHANNELS
+                </span>
+                
+                <div class="space-y-4 text-xs">
+                  <!-- Email link + Copy -->
+                  <div class="flex items-center justify-between">
+                    <span class="flex items-center space-x-2 text-zinc-300 html:not(.dark):text-zinc-800 font-medium">
+                      <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+                      <span id="footer-email-text">satishofcit@gmail.com</span>
+                    </span>
+                    <button onclick="copyEmailToClipboard()" class="p-1 px-2.5 rounded-lg text-[10px] font-mono bg-zinc-900 html:not(.dark):bg-white border border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-400 hover:text-zinc-100 flex items-center space-x-1">
+                      <i data-lucide="copy" id="email-btn-icon" class="w-3.5 h-3.5"></i>
+                      <span id="email-btn-text">Copy</span>
+                    </button>
+                  </div>
+
+                  <!-- Telephone link -->
+                  <div class="flex items-center justify-between pt-3 border-t border-zinc-800 html:not(.dark):border-zinc-100">
+                    <span class="flex items-center space-x-2 text-zinc-300 html:not(.dark):text-zinc-800 font-medium font-mono">
+                      <i data-lucide="phone" class="w-4 h-4 text-cyan-400"></i>
+                      <span id="footer-phone-text">9859817451</span>
+                    </span>
+                    <a id="footer-phone-link" href="tel:9859817451" class="p-1 px-2.5 rounded-lg text-[10px] font-mono bg-zinc-900 html:not(.dark):bg-white border border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-400 hover:text-zinc-100 font-semibold uppercase">
+                      Call Client
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom copyright and footprint -->
+          <div class="flex flex-col sm:flex-row items-center justify-between text-[11px] text-zinc-500 font-mono tracking-wide">
+            <div class="flex items-center space-x-2 mb-4 sm:mb-0">
+              <i data-lucide="terminal" class="w-4.5 h-4.5 text-blue-500"></i>
+              <span>Satish Upadhyay • AI &amp; Operations Portfolio Core</span>
+            </div>
+            <div class="flex items-center space-x-4">
+              <span>Guwahati, Assam, India</span>
+              <span>•</span>
+              <button onclick="toggleResumeModal()" class="text-blue-400 hover:underline">
+                Interactive Document View
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Floating top-layer scroll buttons -->
+      <button id="scroll-top-btn" onclick="scrollToTop()" class="fixed bottom-6 right-6 z-40 p-3 rounded-xl bg-blue-600 text-white shadow-xl hover:bg-blue-550 border border-blue-500/20 cursor-pointer hidden">
+        <i data-lucide="arrow-up" class="w-4.5 h-4.5"></i>
+      </button>
+
+      <!-- 📄 FULL OVERLAID PRINTABLE CV SHEET CONTAINER MODAL (no-print wrappers) -->
+      <div id="resume-modal" class="fixed inset-0 z-50 overflow-y-auto bg-zinc-950/90 backdrop-blur-md items-center justify-center p-4 py-10 hidden no-print flex">
+        <div class="bg-white text-zinc-900 rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden flex flex-col h-full max-h-[90vh]" onclick="event.stopPropagation()">
+          
+          <!-- Modal utility controls head -->
+          <div class="bg-zinc-950 border-b border-zinc-850 p-4 flex items-center justify-between text-white shrink-0">
+            <div class="flex items-center space-x-2">
+              <i data-lucide="file-text" class="w-5 h-5 text-blue-400"></i>
+              <div>
+                <span class="font-display font-bold text-sm tracking-wide block">Executive Resume Document View</span>
+                <span class="block text-[10px] font-mono text-zinc-400">Ready to print, save as PDF or extract raw JSON</span>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-2">
+              <button onclick="downloadStructuredJSON()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-xs font-mono border border-zinc-800 uppercase tracking-widest text-zinc-300">
+                <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                <span class="hidden sm:inline">JSON</span>
+              </button>
+
+              <button onclick="triggerPrintCV()" class="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-xs font-mono font-semibold uppercase tracking-wider text-white">
+                <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+                <span>Print / Save PDF</span>
+              </button>
+
+              <button onclick="toggleResumeModal()" class="p-1.5 rounded-lg hover:bg-zinc-900 text-zinc-400 hover:text-white">
+                <i data-lucide="x" class="w-5 h-5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Printable Canvas Wrapper -->
+          <div id="printable-resume-area" class="p-8 md:p-12 overflow-y-auto grow bg-white text-zinc-800 font-sans">
+            <!-- Full resume layout dynamically loaded from JSON in app.js -->
+            <div class="animate-pulse space-y-6">
+              <div class="h-8 bg-zinc-200 rounded w-1/3"></div>
+              <div class="h-4 bg-zinc-200 rounded w-1/2"></div>
+              <div class="h-20 bg-zinc-200 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Lucide icons cdn helper package -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Main Logic Script Mapping -->
+    <script type="text/javascript">
+      // Inline robust fallback resume database (used if CORS block halts data.json fetch)
+      const LOCAL_FALLBACK_DATA = {
+        "basics": {
+          "name": "Satish Upadhyay",
+          "title": "AI-Driven Product, Services & Business Consultant | Building AI-Enabled SaaS Solutions | Program Manager | CSM® | CSPO®",
+          "summary": "With over 11+ years of proven success in the software industry, I am an accomplished Program Manager, Business Consultant, Certified Scrum Master® (CSM®), and Certified Scrum Product Owner (CSPO), specializing in agile delivery, AI/ML initiatives, premium business consultation, capacity building, and company expansion into global markets. I have successfully led impactful initiatives, including serving Fortune 500 companies like HP, delivering ODM and customer-facing products, and shaping organizational roadmaps. My expertise in solution architecture, strategic business transformation, project management, and mentorship has made me a key driver of innovation and business growth. As a Product Manager, I am building a SaaS-based CRM application using cutting-edge technology and AI, driving the product from ideation to market launch.",
+          "location": "Guwahati, Assam, India",
+          "email": "satishofcit@gmail.com",
+          "phone": "9859817451 (Mobile)",
+          "links": {
+            "linkedin": "https://www.linkedin.com/in/satishkrupadhyay/",
+            "github": "https://github.com/satishkrupadhyay"
+          }
+        },
+        "experience": [
+          {
+            "company": "BoldTek",
+            "role": "Program Manager",
+            "dates": "January 2023 - Present (3 years 6 months)",
+            "location": "Guwahati, Assam, India",
+            "bullets": [
+              "Collaborated closely with project sponsors, cross-functional teams, and designated project managers to conceptualize project scope, deliverables, resource allocation, and timelines for strategic initiatives.",
+              "Orchestrated the management of program and project teams to maximize return on investment.",
+              "Skillfully analyzed and evaluated program risks, proactively formulating effective mitigation strategies."
+            ]
+          },
+          {
+            "company": "BoldTek",
+            "role": "Technical Project Manager",
+            "dates": "January 2020 - February 2023 (3 years 2 months)",
+            "location": "Guwahati Area, India",
+            "bullets": [
+              "Successfully managed and led a diverse team of 30+ software developers and testers.",
+              "Provided visionary leadership for a data science and innovation team comprising 6 employees.",
+              "Liaised with an extensive network of stakeholders, including 100+ ODMs, vendors, and onsite teams."
+            ]
+          },
+          {
+            "company": "HP",
+            "role": "Technical Project Manager",
+            "dates": "November 2019 - Present (6 years 8 months)",
+            "location": "Fort Collins, Colorado, United States",
+            "bullets": [
+              "Team Management: Successfully managed and led a diverse team of 30+ software developers and testers.",
+              "Stakeholder Engagement: Liaised with an extensive network of stakeholders including 10+ ODMs and vendors."
+            ]
+          }
+        ],
+        "achievements": [
+          { "metric": "11+ Years", "context": "of proven success in the software industry", "group": "wins" },
+          { "metric": "30+ Devs/Testers", "context": "successfully managed and led as Technical Project Manager", "group": "leadership" },
+          { "metric": "100+ ODMs", "context": "liaised across global spectrum to sync execution", "group": "metrics" }
+        ],
+        "projects": [
+          {
+            "title": "SaaS CRM Product Ideation to Market",
+            "client": "BoldTek",
+            "stack": ["React", "Artificial Intelligence", "SaaS Architecture"],
+            "bullets": [
+              "Building a SaaS-based CRM application using cutting-edge technology and AI, driving the product from ideation to market launch."
+            ]
+          },
+          {
+            "title": "Vendor Management & Government Bidding Automation",
+            "client": "US Airdrop",
+            "stack": ["Jira", "AWS", "Node.js", "PostgreSQL"],
+            "bullets": [
+              "Leading the end-to-end delivery of US Airdrop, a cloud-based platform to automate government solicitation bids."
+            ],
+            "links": ["https://www.usairdrop.info/"]
+          }
+        ],
+        "skills": [
+          { "category": "Methodology", "items": ["Program Management", "Agile", "Scrum Master (CSM®)", "Product Owner (CSPO®)", "Governance"] },
+          { "category": "Technical", "items": ["Prompt Engineering", "Data Scientist", "Machine Learning", "System Diagnostics"] }
+        ],
+        "certifications": [
+          { "name": "Certified Scrum Master (CSM®)" },
+          { "name": "Certified Scrum Product Owner (CSPO®)" },
+          { "name": "Generative AI Overview for Project Managers" }
+        ],
+        "languages": [
+          { "name": "English", "proficiency": "Full Professional" },
+          { "name": "Hindi", "proficiency": "Full Professional" }
+        ],
+        "education": [
+          { "institution": "Indira Gandhi National Open University", "degree": "Master of Business Administration (MBA), Operations", "dates": "2021 - 2023" },
+          { "institution": "Central Institute of Technology", "degree": "Bachelor of Technology (B.Tech), CSE", "dates": "2012 - 2015" }
+        ],
+        "extra": [
+          "Strategic consulting, scaling startups, high precision programmatic governance."
+        ]
+      };
+
+      let activeData = LOCAL_FALLBACK_DATA;
+      let expFilterMode = "all"; // 'all' or 'metrics'
+      let activeAchievementGroup = "all";
+
+      // Initialize the application and load structured data
+      window.onload = async function() {
+        initSplashProgress();
+      };
+
+      function initSplashProgress() {
+        const progressBar = document.getElementById("splash-progress");
+        let progress = 0;
+        const interval = setInterval(() => {
+          progress += Math.floor(Math.random() * 20) + 10;
+          if (progress >= 100) {
+            progress = 100;
+            clearInterval(interval);
+            loadDatabase().then(() => {
+              progressBar.style.width = "100%";
+              setTimeout(dismissSplashScreen, 400);
+            });
+          } else {
+            progressBar.style.width = progress + "%";
+          }
+        }, 80);
+      }
+
+      async function loadDatabase() {
+        try {
+          // Attempt to load from data.json first
+          const response = await fetch('./data.json');
+          if (response.ok) {
+            const fetched = await response.json();
+            if (fetched && fetched.basics) {
+              activeData = fetched;
+            }
+          }
+        } catch (err) {
+          console.warn("data.json CORS restricted or missing, falling back to embedded database structure", err);
+        }
+        buildAppDOM();
+      }
+
+      function dismissSplashScreen() {
+        const splash = document.getElementById("splash-screen");
+        const app = document.getElementById("app-container");
+        splash.style.opacity = "0";
+        app.style.opacity = "1";
+        setTimeout(() => {
+          splash.remove();
+          lucide.createIcons();
+        }, 500);
+      }
+
+      // Populate elements in the HTML DOM based on the database loaded
+      function buildAppDOM() {
+        document.title = activeData.basics.name + " | Executive Portfolio";
+        
+        // Populate footer details
+        document.getElementById("footer-basics-summary").innerText = activeData.basics.summary.split(". ")[0] + ". " + activeData.basics.summary.split(". ")[1] + ".";
+        document.getElementById("footer-email-text").innerText = activeData.basics.email;
+        document.getElementById("footer-phone-text").innerText = activeData.basics.phone;
+        document.getElementById("footer-phone-link").href = "tel:" + activeData.basics.phone.split(" ")[0];
+
+        // Compile Experience Section
+        renderExperienceChronicle();
+
+        // Compile Achievements categories & list
+        renderAchievements();
+
+        // Compile Projects flagships
+        renderProjects();
+
+        // Compile Skills and certifications columns
+        renderSkillsSection();
+
+        // Compile Education matrices
+        renderEducationMatrices();
+
+        // Build Printable Resume Panel
+        buildPrintableResumeView();
+        
+        // Scroll listeners
+        window.addEventListener("scroll", handleScrollIndicators);
+      }
+
+      // Build Experience blocks
+      function renderExperienceChronicle() {
+        const root = document.getElementById("experience-timeline-container");
+        root.innerHTML = "";
+
+        if (expFilterMode === "all") {
+          // Group experiences by company
+          const companies = {};
+          activeData.experience.forEach(role => {
+            if (!companies[role.company]) {
+              companies[role.company] = {
+                company: role.company,
+                location: role.location,
+                dates: role.dates,
+                roles: []
+              };
+            }
+            companies[role.company].roles.push(role);
+          });
+
+          // Render clustered cards
+          let companyIdx = 0;
+          for (const key in companies) {
+            const corp = companies[key];
+            const isFirst = companyIdx === 0;
+            const companyCard = document.createElement("div");
+            companyCard.className = "overflow-hidden rounded-xl border transition-all duration-300 bg-zinc-950/30 dark:bg-zinc-950/30 html:not(.dark):bg-white border-zinc-805 html:not(.dark):border-zinc-250 hover:border-blue-500/30";
+            
+            companyCard.innerHTML = `
+              <div class="p-5 flex items-start justify-between cursor-pointer select-none" onclick="toggleCompanyCollapse(${companyIdx})">
+                <div class="space-y-1.5 flex-1 pr-4">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="font-display font-semibold text-lg text-zinc-150 html:not(.dark):text-zinc-900 leading-none">${corp.company}</span>
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold uppercase">${corp.roles.length} Position${corp.roles.length > 1 ? 's' : ''}</span>
+                  </div>
+                  <div class="flex flex-wrap gap-x-4 gap-y-1 text-xs text-zinc-500 font-mono">
+                    <span class="flex items-center space-x-1"><i data-lucide="calendar" class="w-3.5 h-3.5 text-blue-400"></i> <span class="pl-1">${corp.roles[0].dates.split(" (")[0]} - Present</span></span>
+                    <span class="flex items-center space-x-1"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-zinc-650"></i> <span class="pl-1">${corp.location}</span></span>
+                  </div>
+                </div>
+                <div class="p-1 rounded-md bg-zinc-800/40 text-zinc-400">
+                  <i data-lucide="chevron-down" id="chevron-corp-${companyIdx}" class="w-4 h-4 transition-transform duration-300"></i>
+                </div>
+              </div>
+              
+              <div id="collapse-corp-${companyIdx}" class="collapsible-content">
+                <div class="px-5 pb-6 pt-2 border-t border-zinc-900 html:not(.dark):border-zinc-100 space-y-6">
+                  ${corp.roles.map((r, rIdx) => `
+                    <div class="relative pl-6 border-l border-zinc-805 space-y-3 pb-2 last:pb-0 last:border-l-0">
+                      <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-blue-500 ring-4 ring-[#050505]"></div>
+                      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <h4 class="font-display font-semibold text-sm text-zinc-200 html:not(.dark):text-zinc-855">${r.role}</h4>
+                        <span class="font-mono text-[10px] text-zinc-500 font-medium">${r.dates}</span>
+                      </div>
+                      <div class="space-y-2">
+                        ${r.bullets.map(b => `
+                          <div class="flex items-start space-x-2.5 text-xs p-2.5 rounded-lg bg-zinc-90 w-auto bg-zinc-900/40 dark:bg-zinc-950/15 html:not(.dark):bg-zinc-50 border border-zinc-850 dark:border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-350 html:not(.dark):text-zinc-705">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5"></i>
+                            <span class="leading-relaxed text-zinc-300 html:not(.dark):text-zinc-800">${b}</span>
+                          </div>
+                        `).join("")}
+                      </div>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+            `;
+            root.appendChild(companyCard);
+            companyIdx++;
+          }
+        } else {
+          // Impact Only Metrics Mode: flatter listing list of numerical/high-quality items
+          const metricsHeader = document.createElement("div");
+          metricsHeader.className = "bg-blue-950/20 border border-blue-500/15 p-4 rounded-xl mb-4 text-xs text-zinc-444";
+          metricsHeader.innerHTML = `
+            <span class="font-mono text-blue-400 uppercase font-semibold block mb-1">IMPACT SPOTLIGHT METRICS (ACTIVE)</span>
+            Filtering resume timelines for explicit numerical highlights, system architecture execution, and high scale leadership points.
+          `;
+          root.appendChild(metricsHeader);
+
+          // Flatten bullets
+          activeData.experience.forEach(role => {
+            role.bullets.forEach(bullet => {
+              const keywords = ["30+", "20+", "100+", "5+", "6 ", "10+", "11+", "Fortune 500", "HP", "HP's", "SaaS", "strategy", "acquired", "spearheaded"];
+              const matches = keywords.some(k => bullet.includes(k));
+              if (matches) {
+                const bulletCard = document.createElement("div");
+                bulletCard.className = "p-4 rounded-xl border border-blue-500/20 bg-blue-500/5 hover:border-blue-500/35 transition-colors relative space-y-2";
+                bulletCard.innerHTML = `
+                  <div class="flex items-center justify-between border-b border-zinc-800 html:not(.dark):border-zinc-100 pb-1.5 mb-1">
+                    <span class="font-display font-medium text-blue-400 text-xs">${role.role}</span>
+                    <span class="font-mono text-[9px] text-zinc-500 uppercase px-2 py-0.5 rounded bg-zinc-90 w-auto bg-zinc-900 border border-zinc-800">${role.company}</span>
+                  </div>
+                  <div class="flex items-start space-x-2.5 text-xs text-zinc-200 html:not(.dark):text-zinc-800">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5"></i>
+                    <span class="leading-relaxed font-medium">${bullet}</span>
+                  </div>
+                `;
+                root.appendChild(bulletCard);
+              }
+            });
+          });
+        }
+        lucide.createIcons();
+      }
+
+      function toggleCompanyCollapse(id) {
+        const val = document.getElementById("collapse-corp-" + id);
+        const icon = document.getElementById("chevron-corp-" + id);
+        if (val.classList.contains("expanded")) {
+          val.classList.remove("expanded");
+          icon.style.transform = "rotate(0deg)";
+        } else {
+          val.classList.add("expanded");
+          icon.style.transform = "rotate(-180deg)";
+        }
+      }
+
+      function setExperienceFilter(mode) {
+        expFilterMode = mode;
+        const allBtn = document.getElementById("exp-filter-all");
+        const metricsBtn = document.getElementById("exp-filter-metrics");
+        
+        if (mode === "all") {
+          allBtn.className = "flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase transition-colors bg-blue-600 text-white font-medium";
+          metricsBtn.className = "flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase transition-colors text-zinc-455 html:not(.dark):text-zinc-650";
+        } else {
+          allBtn.className = "flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase transition-colors text-zinc-455 html:not(.dark):text-zinc-650";
+          metricsBtn.className = "flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-mono tracking-wider uppercase transition-colors bg-blue-600 text-white font-medium shadow-[0_0_12px_rgba(59,130,246,0.3)]";
+        }
+        renderExperienceChronicle();
+      }
+
+      // Compile spotlight achievements
+      function renderAchievements() {
+        const tabsDiv = document.getElementById("achievements-filter-tabs");
+        const gridDiv = document.getElementById("achievements-grid-root");
+
+        // Groups info
+        const groups = [
+          { id: "all", label: "All Achievements" },
+          { id: "wins", label: "Strategic Wins" },
+          { id: "metrics", label: "Key Metrics" },
+          { id: "leadership", label: "Leadership" }
+        ];
+
+        // Group counts
+        tabsDiv.innerHTML = groups.map(g => {
+          let count = activeData.achievements.length;
+          if (g.id !== "all") {
+            count = activeData.achievements.filter(ach => ach.group === g.id).length;
+          }
+          const isActive = g.id === activeAchievementGroup;
+          return `
+            <button onclick="setAchievementGroup('${g.id}')" class="px-4 py-2 rounded-xl text-xs font-mono tracking-wider uppercase transition-all flex items-center space-x-2 border cursor-pointer ${
+              isActive 
+                ? 'bg-blue-600 border-blue-500 text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] font-semibold' 
+                : 'bg-zinc-950/20 html:not(.dark):bg-white border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-400 html:not(.dark):text-zinc-700 hover:text-zinc-100 hover:bg-zinc-800'
+            }">
+              <span>${g.label}</span>
+              <span class="text-[9px] px-1.5 py-0.5 rounded-full ${isActive ? 'bg-blue-700 text-blue-100' : 'bg-zinc-900 html:not(.dark):bg-zinc-100 text-zinc-500'}">${count}</span>
+            </button>
+          `;
+        }).join("");
+
+        // Filter cards
+        const filtered = activeAchievementGroup === "all" 
+          ? activeData.achievements 
+          : activeData.achievements.filter(a => a.group === activeAchievementGroup);
+
+        gridDiv.innerHTML = filtered.map(item => {
+          let iconHtml = '<i data-lucide="target" class="w-5 h-5 text-blue-400"></i>';
+          if (item.group === "wins") iconHtml = '<i data-lucide="trophy" class="w-5 h-5 text-amber-500"></i>';
+          if (item.group === "metrics") iconHtml = '<i data-lucide="trending-up" class="w-5 h-5 text-cyan-400"></i>';
+          if (item.group === "leadership") iconHtml = '<i data-lucide="users" class="w-5 h-5 text-indigo-400"></i>';
+
+          return `
+            <div class="relative overflow-hidden rounded-2xl p-6 border bg-zinc-955/40 html:not(.dark):bg-white/80 border-zinc-800 html:not(.dark):border-zinc-200 hover:border-blue-500/30 hover:bg-zinc-90 w-auto hover:bg-zinc-900/40 transition-all duration-300 flex flex-col justify-between min-h-[180px] group">
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] font-mono tracking-widest text-zinc-500 uppercase font-semibold">${item.group} indexing</span>
+                <div class="p-2 rounded-lg bg-zinc-90 w-auto bg-zinc-900/80 border border-zinc-800 html:not(.dark):border-zinc-200 group-hover:bg-blue-950/20 group-hover:border-blue-500/30 transition-all">
+                  ${iconHtml}
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <div class="font-display text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 to-indigo-300 html:not(.dark):from-blue-700 html:not(.dark):to-indigo-900 group-hover:text-blue-400">
+                  ${item.metric}
+                </div>
+                <p class="font-sans text-xs text-zinc-400 html:not(.dark):text-zinc-650 leading-relaxed font-semibold">${item.context}</p>
+              </div>
+
+              <div class="mt-4 pt-4 border-t border-zinc-800/10 html:not(.dark):border-zinc-100 flex items-center justify-between text-[9px] font-mono uppercase text-zinc-555">
+                <span>Verified Client Index</span>
+                <div class="w-1.5 h-1.5 rounded-full bg-zinc-700 group-hover:bg-blue-400 transition-colors"></div>
+              </div>
+            </div>
+          `;
+        }).join("");
+        lucide.createIcons();
+      }
+
+      function setAchievementGroup(grp) {
+        activeAchievementGroup = grp;
+        renderAchievements();
+      }
+
+      // Compile Projects Flagships
+      function renderProjects() {
+        const root = document.getElementById("projects-grid-root");
+        root.innerHTML = activeData.projects.map((proj, idx) => {
+          const linksHtml = proj.links && proj.links.length > 0 
+            ? `<a href="${proj.links[0]}" target="_blank" rel="noreferrer" class="text-zinc-400 hover:text-blue-400 transition-colors flex items-center space-x-1 border border-zinc-800 html:not(.dark):border-zinc-200 px-2 py-1 rounded bg-zinc-90 w-auto bg-zinc-900/60 html:not(.dark):bg-zinc-50">
+                <span>Website</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+               </a>`
+            : "";
+
+          return `
+            <div class="group overflow-hidden rounded-2xl border border-zinc-850 dark:border-zinc-800/80 html:not(.dark):border-zinc-200 bg-zinc-950/20 html:not(.dark):bg-white hover:bg-zinc-90 w-auto hover:bg-zinc-900/40 html:not(.dark):hover:bg-white hover:border-blue-500/30 transition-all p-6 flex flex-col justify-between">
+              <div>
+                <!-- Header details info -->
+                <div class="flex items-center justify-between mb-6">
+                  <div class="flex items-center space-x-3">
+                    <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/10">
+                      <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                      <span class="font-mono text-[10px] text-zinc-500 block uppercase font-bold tracking-widest">INITIATIVE 0${idx + 1}</span>
+                      <span class="text-xs text-zinc-400 html:not(.dark):text-zinc-650 font-semibold uppercase font-mono">Client: ${proj.client || "Strategic Initiative"}</span>
+                    </div>
+                  </div>
+                  <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-mono bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 font-semibold">Active System</span>
+                </div>
+
+                <h3 class="font-display text-xl sm:text-2xl font-extrabold text-zinc-100 html:not(.dark):text-zinc-900 mb-4 group-hover:text-blue-400 transition-colors">
+                  ${proj.title}
+                </h3>
+
+                <div class="space-y-3 mb-6">
+                  ${proj.bullets.map(b => `
+                    <div class="flex items-start space-x-2.5 text-xs text-zinc-400 html:not(.dark):text-zinc-800 leading-relaxed">
+                      <i data-lucide="chevron-right" class="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5"></i>
+                      <span>${b}</span>
+                    </div>
+                  `).join("")}
+                </div>
+              </div>
+
+              <!-- Footers elements -->
+              <div>
+                <div class="flex flex-wrap gap-1.5 pt-4 border-t border-zinc-850 dark:border-zinc-800 html:not(.dark):border-zinc-100 mb-4">
+                  ${proj.stack.map(tag => `
+                    <span class="px-2 py-1 rounded-md text-[10px] font-mono bg-zinc-90 w-auto bg-zinc-900 html:not(.dark):bg-zinc-100 text-zinc-400 html:not(.dark):text-zinc-750 border border-zinc-800 html:not(.dark):border-zinc-200">${tag}</span>
+                  `).join("")}
+                </div>
+
+                <div class="flex justify-between items-center text-[10px] font-mono text-zinc-500">
+                  <span class="flex items-center space-x-1">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-blue-500"></i>
+                    <span>Verified Client Delivery</span>
+                  </span>
+                  ${linksHtml}
+                </div>
+              </div>
+            </div>
+          `;
+        }).join("");
+        lucide.createIcons();
+      }
+
+      // Compile Skills columns
+      function renderSkillsSection() {
+        const matrixRoot = document.getElementById("skills-matrix-root");
+        const languagesRoot = document.getElementById("languages-root");
+        const certsRoot = document.getElementById("certifications-root");
+
+        // Skill list
+        matrixRoot.innerHTML = activeData.skills.map(group => `
+          <div class="space-y-4">
+            <h4 class="font-mono text-xs font-bold text-blue-400 tracking-wider uppercase">${group.category}</h4>
+            <div class="flex flex-wrap gap-2.5">
+              ${group.items.map(skill => `
+                <span class="px-3 py-1.5 rounded-lg text-xs font-sans font-semibold bg-zinc-90 w-auto bg-zinc-900/65 html:not(.dark):bg-zinc-100 border border-zinc-800 html:not(.dark):border-zinc-200 text-zinc-300 html:not(.dark):text-zinc-800 hover:border-blue-500/20 transition-all">${skill}</span>
+              `).join("")}
+            </div>
+          </div>
+        `).join("");
+
+        // Language lists
+        languagesRoot.innerHTML = activeData.languages.map(lang => {
+          let percent = 80;
+          if (lang.proficiency === "Full Professional") percent = 100;
+          if (lang.proficiency === "Limited Working") percent = 50;
+
+          return `
+            <div class="p-4 rounded-xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-95 w-auto bg-zinc-950/40 html:not(.dark):bg-zinc-50">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-display font-bold text-sm text-zinc-200 html:not(.dark):text-zinc-800 flex items-center space-x-1.5">
+                  <i data-lucide="star" class="w-3.5 h-3.5 text-amber-500 fill-amber-500"></i>
+                  <span>${lang.name}</span>
+                </span>
+                <span class="font-mono text-[10px] text-zinc-500">${lang.proficiency}</span>
+              </div>
+              <div class="w-full h-1 bg-zinc-800 html:not(.dark):bg-zinc-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" style="width: ${percent}%"></div>
+              </div>
+            </div>
+          `;
+        }).join("");
+
+        // Certifications
+        certsRoot.innerHTML = activeData.certifications.map(cert => `
+          <div class="p-3.5 rounded-xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-95 w-auto bg-zinc-950/60 html:not(.dark):bg-zinc-50 hover:border-blue-500/20 transition-all flex items-start space-x-3 group">
+            <div class="mt-0.5 p-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/15 group-hover:scale-110 transition-transform">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <h4 class="font-sans text-xs font-semibold text-zinc-200 html:not(.dark):text-zinc-900 leading-normal mb-1">${cert.name}</h4>
+              <span class="font-mono text-[9px] text-zinc-500 uppercase font-medium">Verified Corporate Record</span>
+            </div>
+          </div>
+        `).join("");
+        lucide.createIcons();
+      }
+
+      // Compile Education matrices
+      function renderEducationMatrices() {
+        const root = document.getElementById("education-grid-root");
+        root.innerHTML = activeData.education.map(item => `
+          <div class="p-6 rounded-2xl border border-zinc-800 html:not(.dark):border-zinc-200 bg-zinc-950/20 html:not(.dark):bg-white hover:border-blue-500/30 transition-all flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400">
+                  <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                </div>
+                <div class="flex items-center space-x-1 font-mono text-[10px] text-zinc-500">
+                  <i data-lucide="calendar" class="w-3.5 h-3.5 text-blue-400"></i>
+                  <span class="font-semibold">${item.dates}</span>
+                </div>
+              </div>
+              <h3 class="font-display text-lg font-bold text-zinc-100 html:not(.dark):text-zinc-900 mb-1">${item.degree}</h3>
+              <div class="flex items-center space-x-2 text-xs text-zinc-400 html:not(.dark):text-zinc-650">
+                <i data-lucide="landmark" class="w-3.5 h-3.5 text-zinc-500"></i>
+                <span class="font-medium">${item.institution}</span>
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-zinc-800 html:not(.dark):border-zinc-100 flex items-center justify-between">
+              <span class="text-[10px] text-zinc-500 font-mono flex items-center space-x-1">
+                <i data-lucide="book-open" class="w-3.5 h-3.5 text-blue-500"></i>
+                <span>Accredited Academic Record</span>
+              </span>
+              <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+            </div>
+          </div>
+        `).join("");
+        lucide.createIcons();
+      }
+
+      // Build Printable PDF-ready CV Sheet markup inside modal
+      function buildPrintableResumeView() {
+        const root = document.getElementById("printable-resume-area");
+        
+        // Split experience by company for printable style
+        const companies = {};
+        activeData.experience.forEach(role => {
+          if (!companies[role.company]) {
+            companies[role.company] = {
+              company: role.company,
+              location: role.location,
+              dates: role.dates,
+              roles: []
+            };
+          }
+          companies[role.company].roles.push(role);
+        });
+
+        let expMarkup = "";
+        for (const cName in companies) {
+          const corp = companies[cName];
+          expMarkup += `
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between border-b border-zinc-200 pb-0.5 text-xs font-sans font-bold">
+                <span class="text-sm text-blue-700">${corp.company}</span>
+                <span class="font-mono text-zinc-500">${corp.roles[0].dates.split(" (")[0]} - Present • ${corp.location}</span>
+              </div>
+              
+              <div class="space-y-3.5 pl-3 border-l border-zinc-100">
+                ${corp.roles.map(r => `
+                  <div class="space-y-1">
+                    <div class="flex items-center justify-between font-sans text-xs font-bold text-zinc-800">
+                      <span>${r.role}</span>
+                      <span class="font-mono text-zinc-400">${r.dates}</span>
+                    </div>
+                    <ul class="list-disc pl-4 space-y-0.5 text-[10px] text-zinc-600 leading-relaxed text-justify">
+                      ${r.bullets.map(b => `<li>${b}</li>`).join("")}
+                    </ul>
+                  </div>
+                `).join("")}
+              </div>
+            </div>
+          `;
+        }
+
+        root.innerHTML = `
+          <div class="max-w-3xl mx-auto space-y-8">
+            <!-- CV Header -->
+            <div class="border-b-2 border-zinc-900 pb-6 flex flex-col md:flex-row md:justify-between md:items-start space-y-4 md:space-y-0">
+              <div>
+                <h1 class="font-display text-3xl sm:text-4xl font-extrabold text-zinc-900 tracking-tight leading-none mb-2">${activeData.basics.name}</h1>
+                <p class="font-sans text-xs font-semibold text-blue-700 tracking-wide max-w-xl">${activeData.basics.title}</p>
+              </div>
+              
+              <div class="text-xs space-y-1.5 text-zinc-600 flex flex-col pt-3 md:pt-0 border-t md:border-t-0 border-zinc-200">
+                <span class="flex items-center space-x-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-zinc-400"></i> <span>${activeData.basics.location}</span></span>
+                <span class="flex items-center space-x-2"><i data-lucide="phone" class="w-3.5 h-3.5 text-zinc-400"></i> <span>${activeData.basics.phone}</span></span>
+                <span class="flex items-center space-x-2"><i data-lucide="mail" class="w-3.5 h-3.5 text-zinc-400"></i> <span>${activeData.basics.email}</span></span>
+                <span class="flex items-center space-x-2"><i data-lucide="linkedin" class="w-3.5 h-3.5 text-zinc-400"></i> <span>linkedin.com/in/satishkrupadhyay</span></span>
+                <span class="flex items-center space-x-2"><i data-lucide="github" class="w-3.5 h-3.5 text-zinc-400"></i> <span>github.com/satishkrupadhyay</span></span>
+              </div>
+            </div>
+
+            <!-- Profile Summary -->
+            <div class="space-y-2">
+              <h2 class="font-display text-xs font-black text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1">Executive Profile Summary</h2>
+              <p class="font-sans text-[11px] text-zinc-600 leading-relaxed text-justify">${activeData.basics.summary}</p>
+            </div>
+
+            <!-- Experience Chronicle -->
+            <div class="space-y-4">
+              <h2 class="font-display text-xs font-black text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1">Professional Chronicle</h2>
+              <div class="space-y-5">${expMarkup}</div>
+            </div>
+
+            <!-- Dual Columns Core Competencies and Education -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+              <!-- Left pane: Skills and Languages -->
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <h2 class="font-display text-xs font-black text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1">Core Tech Competencies</h2>
+                  <div class="space-y-2.5">
+                    ${activeData.skills.map(group => `
+                      <div class="space-y-0.5">
+                        <span class="text-[9px] uppercase font-bold text-zinc-500">${group.category}</span>
+                        <div class="flex flex-wrap gap-1">
+                          ${group.items.map(s => `<span class="bg-zinc-100 px-1.5 py-0.5 rounded text-[9px] text-zinc-700 font-semibold border border-zinc-200">${s}</span>`).join("")}
+                        </div>
+                      </div>
+                    `).join("")}
+                  </div>
+                </div>
+
+                <div class="space-y-2">
+                  <h2 class="font-display text-xs font-black text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1">Linguistic Capabilities</h2>
+                  <div class="flex flex-wrap gap-2 text-xs">
+                    ${activeData.languages.map((lang, lidx) => `
+                      <span class="text-[11px] text-zinc-700"><strong>${lang.name}</strong> (${lang.proficiency})${lidx < activeData.languages.length - 1 ? ' <span class="text-zinc-300 font-bold px-1">•</span>' : ''}</span>
+                    `).join("")}
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right pane: Accreditations and education -->
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <h2 class="font-display text-xs font-black text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1">Professional Accreditations</h2>
+                  <ul class="list-disc pl-4 space-y-1 text-xs text-zinc-700">
+                    ${activeData.certifications.map(cert => `
+                      <li class="font-semibold text-zinc-800 text-[11px]">${cert.name}</li>
+                    `).join("")}
+                  </ul>
+                </div>
+
+                <div class="space-y-2">
+                  <h2 class="font-display text-xs font-black text-zinc-900 uppercase tracking-widest border-b border-zinc-300 pb-1">Academic Background</h2>
+                  <div class="space-y-3">
+                    ${activeData.education.map(edu => `
+                      <div class="font-sans text-[11px] leading-snug">
+                        <div class="font-bold text-zinc-900">${edu.institution}</div>
+                        <div class="text-zinc-600 flex justify-between">
+                          <span>${edu.degree}</span>
+                          <span class="font-mono text-[10px] text-zinc-400">${edu.dates}</span>
+                        </div>
+                      </div>
+                    `).join("")}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Extras Additional areas -->
+            <div class="space-y-2 pt-4">
+              <h2 class="font-display text-xs font-bold text-blue-700 tracking-widest uppercase border-b border-zinc-200 pb-1">Additional / Auxiliary Focus Areas</h2>
+              <ul class="list-disc pl-4 space-y-1 text-[11px] text-zinc-650 leading-relaxed text-justify">
+                ${activeData.extra.map(line => `<li>${line}</li>`).join("")}
+              </ul>
+            </div>
+
+            <div class="pt-6 border-t border-zinc-200 flex justify-between items-center text-[9px] text-zinc-400 font-mono uppercase">
+              <span>Authentic Structured Resume Document</span>
+              <span>Satish Upadhyay • Verified Record</span>
+            </div>
+          </div>
+        `;
+        lucide.createIcons();
+      }
+
+      // App UI control functions
+      function scrollToSection(id) {
+        const element = document.getElementById(id);
+        if (element) {
+          const offsetTop = element.offsetTop - 80;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: "smooth"
+          });
+        }
+      }
+
+      function mobileNavigate(id) {
+        toggleMobileMenu();
+        scrollToSection(id);
+      }
+
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-drawer");
+        const burgerIcon = document.getElementById("menu-icon-burger");
+        const closeIcon = document.getElementById("menu-icon-close");
+        if (menu.classList.contains("hidden")) {
+          menu.classList.remove("hidden");
+          burgerIcon.classList.add("hidden");
+          closeIcon.classList.remove("hidden");
+        } else {
+          menu.classList.add("hidden");
+          burgerIcon.classList.remove("hidden");
+          closeIcon.classList.add("hidden");
+        }
+      }
+
+      function toggleDarkMode() {
+        const h = document.documentElement;
+        const s = document.querySelectorAll(".light-only");
+        const d = document.querySelectorAll(".dark-only");
+        
+        if (h.classList.contains("dark")) {
+          h.classList.remove("dark");
+          s.forEach(el => el.classList.remove("hidden"));
+          d.forEach(el => el.classList.add("hidden"));
+        } else {
+          h.classList.add("dark");
+          s.forEach(el => el.classList.add("hidden"));
+          d.forEach(el => el.classList.remove("hidden"));
+        }
+      }
+
+      function handleScrollIndicators() {
+        // Scroll progress line
+        const total = document.documentElement.scrollHeight - window.innerHeight;
+        const progressLine = document.getElementById("scroll-progress");
+        const btn = document.getElementById("scroll-top-btn");
+
+        if (total > 0) {
+          const prg = (window.scrollY / total) * 100;
+          progressLine.style.width = prg + "%";
+        }
+
+        // Floating Back to Top Button
+        if (window.scrollY > 400) {
+          btn.classList.remove("hidden");
+        } else {
+          btn.classList.add("hidden");
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+
+      // Interactive Modal View PDF
+      function toggleResumeModal() {
+        const modal = document.getElementById("resume-modal");
+        if (modal.classList.contains("hidden")) {
+          modal.classList.remove("hidden");
+          document.body.classList.add("overflow-hidden");
+        } else {
+          modal.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        }
+      }
+
+      // Copy callback action
+      function copyEmailToClipboard() {
+        navigator.clipboard.writeText(activeData.basics.email);
+        const icon = document.getElementById("email-btn-icon");
+        const text = document.getElementById("email-btn-text");
+
+        text.innerText = "Copied!";
+        icon.className = "w-3.5 h-3.5 text-green-500";
+        lucide.createIcons();
+        setTimeout(() => {
+          text.innerText = "Copy";
+          icon.className = "w-3.5 h-3.5";
+          lucide.createIcons();
+        }, 2000);
+      }
+
+      // Download structure mapping JSON
+      function downloadStructuredJSON() {
+        const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(activeData, null, 2));
+        const dlAnchorElem = document.createElement('a');
+        dlAnchorElem.setAttribute("href", dataStr);
+        dlAnchorElem.setAttribute("download", "Satish_Upadhyay_Resume.json");
+        dlAnchorElem.click();
+      }
+
+      // Web Native Print command trigger
+      function triggerPrintCV() {
+        window.print();
+      }
+    </script>
+  </body>
+</html>

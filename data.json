@@ -1,0 +1,310 @@
+{
+  "basics": {
+    "name": "Satish Upadhyay",
+    "title": "AI-Driven Product, Services & Business Consultant | Building AI-Enabled SaaS Solutions | Program Manager | CSM® | CSPO®",
+    "summary": "With over 11+ years of proven success in the software industry, I am an accomplished Program Manager, Business Consultant, Certified Scrum Master® (CSM®), and Certified Scrum Product Owner (CSPO), specializing in agile delivery, AI/ML initiatives, premium business consultation, capacity building, and company expansion into global markets. I have successfully led impactful initiatives, including serving Fortune 500 companies like HP, delivering ODM and customer-facing products, and shaping organizational roadmaps. My expertise in solution architecture, strategic business transformation, project management, and mentorship has made me a key driver of innovation and business growth. As a Product Manager, I am building a SaaS-based CRM application using cutting-edge technology and AI, driving the product from ideation to market launch. My major contributions at BoldTek include Solution designing and Architecture, professional consultation, talent acquisition, capacity building, offshore delivery management, and supporting company expansion across India, the USA, and Taiwan. I excel at defining deliverables, shaping project scopes, and aligning resources for complex initiatives while ensuring seamless collaboration between cross-functional teams and external vendors. By fostering strong networks of project managers and mentoring teams, I have built a culture of accountability and continuous improvement within my organizations. Let’s connect to explore opportunities for driving innovation, offering business consultation, scaling businesses, and delivering cutting-edge technology solutions globally.",
+    "location": "Guwahati, Assam, India",
+    "email": "satishofcit@gmail.com",
+    "phone": "9859817451 (Mobile)",
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/satishkrupadhyay/",
+      "github": "https://github.com/satishkrupadhyay"
+    }
+  },
+  "experience": [
+    {
+      "company": "BoldTek",
+      "role": "Program Manager",
+      "dates": "January 2023 - Present (3 years 6 months)",
+      "location": "Guwahati, Assam, India",
+      "bullets": [
+        "Collaborated closely with project sponsors, cross-functional teams, and designated project managers to conceptualize project scope, deliverables, resource allocation, work plans, budgets, and timelines for new strategic initiatives.",
+        "Orchestrated the management of program and project teams to maximize return on investment, while effectively coordinating and delegating initiatives that spanned multiple projects.",
+        "Identified critical requirements for cross-functional teams and external vendors, ensuring seamless collaboration and alignment throughout the project lifecycle.",
+        "Developed and meticulously managed project budgets, assuming accountability for successful delivery in alignment with established business objectives and goals.",
+        "Played an integral role in a cohesive network of project managers, collectively identifying risks and opportunities across a spectrum of projects within the department.",
+        "Skillfully analyzed and evaluated program risks, proactively formulating effective mitigation strategies to ensure project success, while generating comprehensive program reports for senior management and stakeholders.",
+        "Leveraged exceptional team-building and stakeholder management skills to foster an environment of collaboration and alignment, vital for the successful execution of projects.",
+        "Demonstrated keen analytical acumen to drive project governance, ensuring adherence to timelines, budgets, and quality benchmarks.",
+        "Exemplified effective people management abilities, facilitating seamless interactions between cross-functional teams, departments, and external partners.",
+        "Integrated IT operations seamlessly into project workflows, ensuring the alignment of technical implementation with overarching business objectives.",
+        "Contributed to shaping the business strategy by providing valuable insights derived from program and project management experience."
+      ]
+    },
+    {
+      "company": "BoldTek",
+      "role": "Technical Project Manager",
+      "dates": "January 2020 - February 2023 (3 years 2 months)",
+      "location": "Guwahati Area, India",
+      "bullets": [
+        "Successfully managed and led a diverse team of 30+ software developers and testers, fostering a culture of collaboration, innovation, and high-quality deliverables.",
+        "Provided visionary leadership for a data science and innovation team comprising 6 employees, driving the exploration and implementation of cutting-edge solutions to complex challenges.",
+        "Demonstrated expertise as an Agile Scrum Master, orchestrating seamless coordination with product owners to ensure meticulous grooming of individual team sprint backlogs. Collaborated with management to align with Road Map items and comprehend the overarching business targets.",
+        "Skillfully scheduled work based on priorities and service level agreements, optimizing resource utilization and ensuring timely project delivery.",
+        "Effectively liaised with an extensive network of stakeholders, including 100+ ODMs, vendors, project managers, and onsite teams. This interaction facilitated streamlined communication and the synchronization of efforts across the project ecosystem.",
+        "Spearheaded the development and successful delivery of 5+ client projects, driving value creation and solidifying client relationships through exceptional project execution.",
+        "Played a pivotal role in talent acquisition and development by hiring and onboarding 20+ members across various project teams. This strategic approach bolstered team capabilities and enhanced project outcomes."
+      ]
+    },
+    {
+      "company": "BoldTek",
+      "role": "Data Scientist",
+      "dates": "July 2018 - January 2020 (1 year 7 months)",
+      "location": "Guwahati Area, India",
+      "bullets": [
+        "Collaborated closely with clients to comprehensively understand their unique business challenges, leveraging effective communication to define project objectives and scope.",
+        "Extracted, consolidated, and transformed data from a variety of internal and external sources, employing data engineering techniques to ensure accuracy and reliability.",
+        "Applied advanced analytics programs, machine learning algorithms, and statistical methods to preprocess and refine data, making it suitable for predictive and prescriptive modeling.",
+        "Conducted thorough exploratory data analysis from diverse perspectives, uncovering hidden trends, weaknesses, and opportunities that provided valuable insights for strategic decision-making.",
+        "Employed data visualization techniques and reporting tools to effectively communicate predictions and findings to clients, facilitating a clear understanding of complex data-driven insights.",
+        "Spearheaded research initiatives aimed at enhancing product quality, actively developing techniques to elevate the overall quality standards of products.",
+        "Successfully extracted and transformed data from multiple internal sources, ensuring the availability of clean and accurate data for analysis.",
+        "Utilized statistical and machine learning models to establish robust quality control mechanisms for products, contributing to improved manufacturing processes.",
+        "Collaborated seamlessly with ODMs, TPMs, and Factory Support teams, fostering cross-functional partnerships to drive enhanced product quality for HP's offerings.",
+        "Demonstrated strong interpersonal skills while interacting with diverse teams and individuals, ensuring effective cross-functional communication and coordination."
+      ]
+    },
+    {
+      "company": "BoldTek",
+      "role": "Software Developer",
+      "dates": "August 2016 - July 2018 (2 years)",
+      "location": "Guwahati Area, India",
+      "bullets": [
+        "Collaborated with stakeholders to develop comprehensive flowcharts, layouts, and documentation, effectively identifying project requirements and proposing innovative solutions.",
+        "Spearheaded the research, design, and development of cutting-edge software programs, employing industry best practices and programming languages to create robust and efficient solutions.",
+        "Thrived in an agile environment, successfully testing and implementing software development methodologies that promoted iterative and adaptable project progress.",
+        "Acquired and extracted data from both primary and secondary sources, demonstrating proficiency in data collection and database management techniques.",
+        "Applied statistical methods to analyze collected data, transforming raw information into actionable insights that facilitated informed decision-making.",
+        "Generated insightful business reports, utilizing data-driven findings to convey valuable information to stakeholders and drive strategic initiatives."
+      ]
+    },
+    {
+      "company": "HP",
+      "role": "Technical Project Manager",
+      "dates": "November 2019 - Present (6 years 8 months)",
+      "location": "Fort Collins, Colorado, United States",
+      "bullets": [
+        "Team Management: Successfully managed and led a diverse team of 30+ software developers and testers, fostering a culture of collaboration, innovation, and high-quality deliverables.",
+        "Product Roadmap: Collaborated with business stakeholders to plan the product roadmap based on sales forecasting and R&D strategies.",
+        "Stakeholder Engagement: Effectively liaised with an extensive network of stakeholders, including 10+ ODMs, vendors, project managers, and onsite teams. This interaction facilitated streamlined communication and the synchronization of efforts across the project ecosystem.",
+        "Product Backlog Maintenance: Created, updated, and maintained product backlog items, ensuring alignment with software scope and features.",
+        "Facilitation of Scrum Events: Organized and facilitated key Scrum events including sprint planning, Daily Scrum, Sprint Review, and Sprint Retrospective meetings.",
+        "Release Plan Management: Managed the software release plan and schedule, ensuring timely and quality delivery of software releases."
+      ]
+    },
+    {
+      "company": "Spice Digital",
+      "role": "Onsite Engineer Trainee",
+      "dates": "November 2015 - June 2016 (8 months)",
+      "location": "Guwahati",
+      "bullets": [
+        "Managed the installation and seamless upgrading of hardware, software, and peripherals, ensuring the continuity of essential IT operations and enhancing overall system performance.",
+        "Developed, coded, and deployed programs onto the server, optimizing functionality and facilitating streamlined processes for end-users.",
+        "Assumed responsibility for overseeing the on-site performance of servers, hardware components, and software applications. Conducted regular evaluations to maintain operational efficiency and proactively addressed any emerging issues.",
+        "Leveraged strong analytical skills to conduct in-depth research, diagnose system issues, and swiftly troubleshoot technical challenges. Employed data-driven insights to develop effective solutions that minimized downtime and enhanced system reliability.",
+        "Demonstrated adeptness in preparing detailed and timely reports, offering comprehensive insights into the performance, status, and areas of improvement within the IT infrastructure.",
+        "Collaborated closely with cross-functional teams to ensure seamless integration of hardware and software solutions, fostering a cohesive and productive IT environment.",
+        "Contributed to the continuous improvement of IT systems by recommending and implementing innovative strategies and solutions that aligned with emerging industry trends."
+      ]
+    }
+  ],
+  "achievements": [
+    {
+      "metric": "11+ Years",
+      "context": "of proven success in the software industry, specialized in agile delivery, AI/ML initiatives and global markets.",
+      "group": "wins"
+    },
+    {
+      "metric": "30+ Devs/Testers",
+      "context": "successfully managed and led as Technical Project Manager, fostering a solid culture of high-quality delivery.",
+      "group": "leadership"
+    },
+    {
+      "metric": "100+ ODMs & Stakeholders",
+      "context": "effectively liaised across a global spectrum to synchronize cross-functional project execution.",
+      "group": "metrics"
+    },
+    {
+      "metric": "5+ Client Projects",
+      "context": "spearheaded the end-to-end development and successful delivery, solidifying critical business accounts.",
+      "group": "wins"
+    },
+    {
+      "metric": "20+ New Members",
+      "context": "sourced, hired, and onboarded across multiple development squads, significantly enhancing core delivery speed.",
+      "group": "leadership"
+    },
+    {
+      "metric": "6 Data Scientists",
+      "context": "under direct leadership on the Innovation Team, exploring cutting edge solutions to complex enterprise challenges.",
+      "group": "leadership"
+    },
+    {
+      "metric": "10+ ODMs at HP",
+      "context": "cooperated with an extensive vendor base to plan roadmap execution, release tracks and scrum facilitation.",
+      "group": "metrics"
+    }
+  ],
+  "projects": [
+    {
+      "title": "SaaS CRM Product Ideation to Market",
+      "client": "BoldTek",
+      "stack": ["React", "Artificial Intelligence", "SaaS Architecture", "CRM Frameworks"],
+      "bullets": [
+        "Building a SaaS-based CRM application using cutting-edge technology and AI, driving the product from ideation to market launch.",
+        "Leading major contributions including Solution designing and Architecture, talent acquisition, capacity building, and offshore delivery management.",
+        "Supporting company expansion across India, the USA, and Taiwan by aligning strategic resources for complex initiatives."
+      ]
+    },
+    {
+      "title": "Fortune 500 Product Collaborations (HP)",
+      "client": "HP Inc.",
+      "stack": ["Agile/Scrum", "Product Roadmap Planning", "Data-Driven Reporting", "Vendor Management"],
+      "bullets": [
+        "Led impactful initiatives serving Fortune 500 companies like HP, delivering high-level ODM and customer-facing products.",
+        "Partnered with HP's R&D, sales forecasting, and cross-functional teams across Colorado, USA, to synchronize software release schedules and scrum activities.",
+        "Maintained deep quality and compliance requirements across primary hardware and software configurations."
+      ]
+    },
+    {
+      "title": "Vendor Management & Government Bidding Automation",
+      "client": "US Airdrop",
+      "stack": ["Jira", "Confluence", "Figma", "AWS", "Node.js", "PostgreSQL", "Docker", "GitHub", "Slack"],
+      "bullets": [
+        "Leading the end-to-end delivery of US Airdrop, a cloud-based platform designed to streamline vendor management, RFQ tracking, and automated bidding processes for U.S. government solicitations.",
+        "Supports efficient data handling from sources like SAM.gov and DLA, enabling businesses to identify qualified opportunities, manage contacts and inventory, and automate batch quote submissions.",
+        "Defined scope, timeline, and sprint plans using Agile methodology, coordinating cross-functional teams across UI/UX, backend, QA, and architecture.",
+        "Oversaw stakeholder communication, requirement analysis, and prioritization, while delivering detailed wireframes, cloud deployment, and testing strategies.",
+        "Managed API integration, data mapping, and security considerations."
+      ],
+      "links": ["https://www.usairdrop.info/"]
+    },
+    {
+      "title": "Optimize Building Performance & Slash Costs with AI-Powered Engineering",
+      "client": "PICO",
+      "stack": ["Python", "Django", "Google Cloud Platform (GCP)", "PostgreSQL", "Jira"],
+      "bullets": [
+        "Managing the end-to-end data lifecycle—from acquisition and cleaning to pipeline automation and integration.",
+        "Working closely with the AI team to enable predictive modeling, anomaly detection, and process automation for smart commercial buildings.",
+        "Collaborating with the application team to ensure data accessibility, usability, and reliability within the platform.",
+        "Implementing cloud-native solutions on GCP for efficient data storage and processing.",
+        "Driving delivery through agile methodologies and coordinated task tracking with Jira to help operators reduce operational costs."
+      ],
+      "links": ["https://pico.expert/"]
+    },
+    {
+      "title": "Factory Diagnostic Software",
+      "client": "HP Inc.",
+      "stack": ["Conflict Management", "Stakeholder Management", "Agile/Scrum", "Roadmap Planning", "Backlog Refinement", "Scrum Events", "Release Planning"],
+      "bullets": [
+        "Developed and maintained robust hardware diagnostic software used by Original Design Manufacturers (ODMs) to ensure assembled systems (Desktop, Notebook, Workstation, and POS) meet quality benchmarks.",
+        "Collaborated with business stakeholders to plan the product roadmap based on sales forecasting and R&D strategies.",
+        "Worked with product owners to refine and prioritize user stories based on factory needs and issue severity.",
+        "Organized and facilitated sprint planning, Daily Scrum, Sprint Review, and Sprint Retrospective meetings.",
+        "Presented project increments to business stakeholders during sprint reviews and assisted the development team with story writing and pointing."
+      ]
+    },
+    {
+      "title": "Speech Recognition and Interaction Model for Bahasa (Indonesia)",
+      "client": "T7A",
+      "stack": ["Data Science", "Natural Language Processing (NLP)", "User Interaction Design", "Speech-to-Intent Conversion", "Text-to-Speech Conversion", "Technology Innovation"],
+      "bullets": [
+        "Spearheaded the development of a cutting-edge Speech Recognition and Interaction Model tailored for Bahasa (Indonesia) to enhance customer experience.",
+        "Customer Details Verification: Designed and implemented an innovative solution for customer details verification through phone calls leveraging speech algorithms.",
+        "Speech-to-Intent Conversion: Developed a sophisticated speech-to-intent conversion mechanism that seamlessly translated spoken language into actionable intents.",
+        "Text-to-Speech Conversion: Integrated robust text-to-speech conversion capabilities, enabling the system to articulate responses in a natural and human-like manner."
+      ]
+    },
+    {
+      "title": "Machine Learning based System Diagnostic Application",
+      "client": "HP Inc.",
+      "stack": ["ML.NET", "C#", "Predictive Frameworks", "Windows App Development", "On-Device Modeling"],
+      "bullets": [
+        "Played a pivotal role in designing and developing a predictive troubleshooting solution focused on predicting device-specific issues.",
+        "Designing Predictive Framework: Conceptualized and architectural-designed a predictive framework harnessing data collected from connected devices for real-time issue forecasting.",
+        "Data Collection & Processing: Implemented a robust data collection module that seamlessly gathered and compiled telemetry information from devices.",
+        "Windows Application Development: Collaborated to construct a responsive Windows application serving as the diagnostic hub and navigation interface.",
+        "Deployment & On-Device Implementation: Deployed on-device modules to optimize system responsiveness and predict hardware errors in real time without continuous internet dependencies."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Methodology & Leadership",
+      "items": [
+        "Program Management",
+        "Strategic Project Management",
+        "Agile Delivery",
+        "Scrum Methodology (CSM® / CSPO®)",
+        "Mentorship",
+        "Talent Acquisition",
+        "Capacity Building",
+        "Offshore Delivery Management",
+        "Resource Allocation",
+        "Budget Management",
+        "Risk Mitigation",
+        "Stakeholder Alignment",
+        "Project Governance"
+      ]
+    },
+    {
+      "category": "Engineering & Technical",
+      "items": [
+        "Prompt Engineering",
+        "Data Analytics",
+        "Reinforcement Learning",
+        "Solution designing and Architecture",
+        "Machine Learning Algorithms",
+        "Predictive & Prescriptive Modeling",
+        "Exploratory Data Analysis",
+        "Data Visualization & Reporting",
+        "Research Initiatives",
+        "Data Engineering (Extract/Transform/Load)",
+        "IT Operations Integration",
+        "Hardware & Software Upgrades",
+        "Quality Control Processes"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Indira Gandhi National Open University",
+      "degree": "Master of Business Administration (MBA), Operations Management",
+      "dates": "(2021 - 2023)"
+    },
+    {
+      "institution": "Central Institute of Technology, Kokrajhar",
+      "degree": "Bachelor of Technology (B.Tech), Computer science and engineering",
+      "dates": "(2012 - 2015)"
+    },
+    {
+      "institution": "Central Institute of Technology, Kokrajhar",
+      "degree": "Diploma, Computer Science and Engineering",
+      "dates": "(2009 - 2012)"
+    },
+    {
+      "institution": "Rastra Bhasha Vidhya Pith H. E. School",
+      "degree": "High School, HSLC",
+      "dates": "(2007 - 2009)"
+    }
+  ],
+  "certifications": [
+    { "name": "Certified Scrum Master (CSM®)" },
+    { "name": "Certified Scrum Product Owner (CSPO®)" },
+    { "name": "Certified Lean Six Sigma Green Belt" },
+    { "name": "Python for Computer Vision with OpenCV and Deep Learning" },
+    { "name": "DevOps: CI/CD with Jenkins using Pipelines and Docker" },
+    { "name": "Generative AI Overview for Project Managers" }
+  ],
+  "languages": [
+    { "name": "Bengoli", "proficiency": "Limited Working" },
+    { "name": "English", "proficiency": "Full Professional" },
+    { "name": "Hindi", "proficiency": "Full Professional" },
+    { "name": "Assamese", "proficiency": "Full Professional" }
+  ],
+  "extra": [
+    "Expertise in Solution Designing and Architecture, talent acquisition, capacity building, and offshore delivery management.",
+    "Actively spearheaded business strategy shaping by translating technical implementation into overarching business objectives.",
+    "Offering strategic business consultation, scaling startups and enterprise workflows, and aligning processes with high-quality standards."
+  ]
+}
